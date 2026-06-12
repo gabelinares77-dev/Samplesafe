@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#ffffff" />
+<title>King — Daily Strength for Men of God</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ============ SVG ICON LIBRARY ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- Crown -->
+    <symbol id="i-crown" viewBox="0 0 48 40">
+      <path d="M6 32 L9 12 L18 22 L24 7 L30 22 L39 12 L42 32 Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+      <line x1="8" y1="36" x2="40" y2="36" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="9" cy="9" r="1.8" fill="currentColor"/>
+      <circle cx="24" cy="3.5" r="1.8" fill="currentColor"/>
+      <circle cx="39" cy="9" r="1.8" fill="currentColor"/>
+    </symbol>
+    <!-- Flame -->
+    <symbol id="i-flame" viewBox="0 0 32 40">
+      <path d="M16 2 C16 10 6 14 6 25 a10 10 0 0 0 20 0 C26 16 18 12 16 2 Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+      <path d="M16 22 c0 4 -4 5 -4 9 a4 4 0 0 0 8 0 c0 -4 -4 -5 -4 -9 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+    </symbol>
+    <!-- Home -->
+    <symbol id="i-home" viewBox="0 0 24 24">
+      <path d="M3.5 11 L12 3.5 L20.5 11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M5.5 10 V20.5 H18.5 V10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M10 20.5 V14.5 H14 V20.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+    </symbol>
+    <!-- Plans (calendar w/ check) -->
+    <symbol id="i-plans" viewBox="0 0 24 24">
+      <rect x="3.5" y="5" width="17" height="15.5" rx="3" fill="none" stroke="currentColor" stroke-width="2"/>
+      <line x1="3.5" y1="9.5" x2="20.5" y2="9.5" stroke="currentColor" stroke-width="2"/>
+      <line x1="8" y1="3" x2="8" y2="6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <line x1="16" y1="3" x2="16" y2="6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M8.5 14.5 L11 17 L15.5 12.8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <!-- Journal (pencil in square) -->
+    <symbol id="i-journal" viewBox="0 0 24 24">
+      <rect x="3.5" y="3.5" width="17" height="17" rx="3.5" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M8 16 L8.8 12.8 L14.4 7.2 a1.6 1.6 0 0 1 2.3 0 l0.1 0.1 a1.6 1.6 0 0 1 0 2.3 L11.2 15.2 Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+    </symbol>
+    <!-- Prayer (praying hands) -->
+    <symbol id="i-prayer" viewBox="0 0 24 24">
+      <path d="M12 3.5 C10 7 8.2 9.5 8.2 13.5 L8.2 17.5 L5 20.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M12 3.5 C14 7 15.8 9.5 15.8 13.5 L15.8 17.5 L19 20.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M12 8.5 L12 16.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M8.2 17.5 L12 16 L15.8 17.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <!-- Profile (person) -->
+    <symbol id="i-profile" viewBox="0 0 24 24">
+      <circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M4.5 20.5 a7.5 7.5 0 0 1 15 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+    <!-- Book (verse) -->
+    <symbol id="i-book" viewBox="0 0 24 24">
+      <path d="M12 5.5 C10 4 7 3.5 3.5 4 V19 C7 18.5 10 19 12 20.5 C14 19 17 18.5 20.5 19 V4 C17 3.5 14 4 12 5.5 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <line x1="12" y1="5.5" x2="12" y2="20.5" stroke="currentColor" stroke-width="2"/>
+    </symbol>
+    <!-- Pencil -->
+    <symbol id="i-pencil" viewBox="0 0 24 24">
+      <path d="M4.5 19.5 L5.6 15.2 L15.6 5.2 a2.2 2.2 0 0 1 3.1 0 l0.1 0.1 a2.2 2.2 0 0 1 0 3.1 L8.8 18.4 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <line x1="13.8" y1="7" x2="17" y2="10.2" stroke="currentColor" stroke-width="2"/>
+    </symbol>
+    <!-- Plan (flag calendar) -->
+    <symbol id="i-flag" viewBox="0 0 24 24">
+      <line x1="6" y1="3.5" x2="6" y2="20.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M6 4.5 H18.5 L15.5 8.5 L18.5 12.5 H6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+    </symbol>
+    <!-- Cross -->
+    <symbol id="i-cross" viewBox="0 0 24 24">
+      <path d="M10 3.5 H14 V8 H19 V12 H14 V20.5 H10 V12 H5 V8 H10 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+    </symbol>
+    <!-- Shield -->
+    <symbol id="i-shield" viewBox="0 0 24 24">
+      <path d="M12 3 L20 6 V12 C20 17 16.5 20 12 21.5 C7.5 20 4 17 4 12 V6 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M8.5 12 L11 14.5 L15.5 9.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <!-- Chevron down / right / left -->
+    <symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="M6 9.5 L12 15.5 L18 9.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-chevron-right" viewBox="0 0 24 24"><path d="M9.5 6 L15.5 12 L9.5 18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M4.5 12 H19" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M13.5 6 L19.5 12 L13.5 18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <!-- Ellipsis -->
+    <symbol id="i-dots" viewBox="0 0 24 24">
+      <circle cx="6" cy="12" r="1.6" fill="currentColor"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/><circle cx="18" cy="12" r="1.6" fill="currentColor"/>
+    </symbol>
+    <!-- Menu (hamburger) -->
+    <symbol id="i-menu" viewBox="0 0 24 24">
+      <line x1="4" y1="7" x2="20" y2="7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+      <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+      <line x1="4" y1="17" x2="20" y2="17" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+    </symbol>
+    <!-- Skip back / forward 15 -->
+    <symbol id="i-skip-back" viewBox="0 0 32 32">
+      <path d="M16 5 A11 11 0 1 1 5.5 12.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+      <path d="M5 5 V12.5 H12.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="16" y="21" text-anchor="middle" font-size="9.5" font-weight="800" font-family="Inter, sans-serif" fill="currentColor" stroke="none">15</text>
+    </symbol>
+    <symbol id="i-skip-fwd" viewBox="0 0 32 32">
+      <path d="M16 5 A11 11 0 1 0 26.5 12.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+      <path d="M27 5 V12.5 H19.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="16" y="21" text-anchor="middle" font-size="9.5" font-weight="800" font-family="Inter, sans-serif" fill="currentColor" stroke="none">15</text>
+    </symbol>
+    <!-- Shuffle / repeat -->
+    <symbol id="i-shuffle" viewBox="0 0 24 24">
+      <path d="M3.5 7 H7 C12 7 12 17 17 17 H20.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M3.5 17 H7 C9 17 10.2 15.5 11 13.8 M13 10.2 C13.9 8.5 15 7 17 7 H20.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M18 4.5 L21 7 L18 9.5 M18 14.5 L21 17 L18 19.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-repeat" viewBox="0 0 24 24">
+      <path d="M5 13 V11 a4 4 0 0 1 4 -4 h10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M19 11 V13 a4 4 0 0 1 -4 4 H5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M16.5 4.5 L19.5 7 L16.5 9.5 M7.5 14.5 L4.5 17 L7.5 19.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <!-- Play / pause -->
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5 L18.5 12 L8 18.5 Z" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><rect x="6.5" y="5" width="3.6" height="14" rx="1" fill="currentColor"/><rect x="13.9" y="5" width="3.6" height="14" rx="1" fill="currentColor"/></symbol>
+    <!-- Stats / bookmark / download / bell / info -->
+    <symbol id="i-stats" viewBox="0 0 24 24">
+      <line x1="5" y1="19" x2="19" y2="19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <line x1="7.5" y1="15.5" x2="7.5" y2="11" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+      <line x1="12" y1="15.5" x2="12" y2="6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+      <line x1="16.5" y1="15.5" x2="16.5" y2="9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-bookmark" viewBox="0 0 24 24"><path d="M6.5 4 H17.5 V20.5 L12 16.5 L6.5 20.5 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24">
+      <path d="M12 4 V14.5 M7.5 10.5 L12 15 L16.5 10.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M4.5 16.5 V19.5 H19.5 V16.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24">
+      <path d="M12 4 a6 6 0 0 1 6 6 c0 4 1.5 5.5 2 6.5 H4 c0.5 -1 2 -2.5 2 -6.5 a6 6 0 0 1 6 -6 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M10 19.5 a2 2 0 0 0 4 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-info" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="2"/>
+      <line x1="12" y1="11" x2="12" y2="16.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+      <circle cx="12" cy="7.6" r="1.4" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-signout" viewBox="0 0 24 24">
+      <path d="M14 4.5 H6.5 V19.5 H14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M10.5 12 H20 M16.5 8 L20.5 12 L16.5 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <!-- Camera -->
+    <symbol id="i-camera" viewBox="0 0 24 24">
+      <rect x="3.5" y="7" width="17" height="13" rx="3" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M8.5 7 L10 4.5 H14 L15.5 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <circle cx="12" cy="13.5" r="3.4" fill="none" stroke="currentColor" stroke-width="2"/>
+    </symbol>
+    <!-- Compass (plans header) -->
+    <symbol id="i-compass" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M15.5 8.5 L13.5 13.5 L8.5 15.5 L10.5 10.5 Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="phone">
+  <main class="screens">
+
+    <!-- ============ SCREEN: MORNING (Home A) ============ -->
+    <section class="screen active" id="screen-morning" data-tab="home">
+      <div class="statusbar"></div>
+      <div class="pad">
+        <div class="greet-row">
+          <span class="greet-small">Good Morning, King.</span>
+          <button class="crown-mark" data-go="home" aria-label="Open dashboard"><svg><use href="#i-crown"/></svg></button>
+        </div>
+        <h1 class="display">You are<br>not forgotten<br>today.</h1>
+        <p class="muted lede">God has purpose<br>for your life.</p>
+
+        <div class="hero-art">
+          <svg viewBox="0 0 340 190" fill="none" stroke="#111" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <!-- floating crown w/ rays -->
+            <g transform="translate(140,8)">
+              <path d="M6 40 L10 14 L22 28 L30 6 L38 28 L50 14 L54 40 Z"/>
+              <line x1="9" y1="46" x2="51" y2="46"/>
+              <circle cx="10" cy="10" r="2" fill="#111" stroke="none"/>
+              <circle cx="30" cy="2" r="2" fill="#111" stroke="none"/>
+              <circle cx="50" cy="10" r="2" fill="#111" stroke="none"/>
+              <line x1="-8" y1="24" x2="-18" y2="20"/>
+              <line x1="68" y1="24" x2="78" y2="20"/>
+              <line x1="-4" y1="44" x2="-14" y2="48"/>
+              <line x1="64" y1="44" x2="74" y2="48"/>
+            </g>
+            <!-- sun -->
+            <circle cx="48" cy="52" r="16"/>
+            <!-- birds -->
+            <path d="M250 48 q5 -6 10 0 q5 -6 10 0" stroke-width="2"/>
+            <path d="M282 32 q4 -5 8 0 q4 -5 8 0" stroke-width="2"/>
+            <!-- back ridge -->
+            <path d="M2 186 L78 96 L120 140 L172 76 L232 150 L286 92 L338 186"/>
+            <!-- snow caps -->
+            <path d="M64 112 L78 96 L92 112 L84 106 L78 113 L71 106 Z" stroke-width="2"/>
+            <path d="M158 94 L172 76 L188 96 L180 89 L172 97 L165 89 Z" stroke-width="2"/>
+            <path d="M272 108 L286 92 L300 108 L293 102 L286 110 L279 102 Z" stroke-width="2"/>
+            <!-- foreground hill -->
+            <path d="M2 186 Q120 148 200 168 T338 186" stroke-width="2"/>
+            <!-- trees -->
+            <path d="M120 186 L120 172 M114 176 L120 166 L126 176 M115 172 L120 162 L125 172" stroke-width="2"/>
+            <path d="M252 186 L252 174 M247 178 L252 168 L257 178" stroke-width="2"/>
+          </svg>
+        </div>
+
+        <div class="card verse-card">
+          <div class="eyebrow"><svg class="ic"><use href="#i-book"/></svg><span>Daily Verse</span></div>
+          <p class="verse-quote">&ldquo;I can do all things through Christ who strengthens me.&rdquo;</p>
+          <p class="verse-ref">Philippians 4:13</p>
+          <button class="btn btn-outline" data-go="player">Read to me <svg class="ic"><use href="#i-arrow-right"/></svg></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SCREEN: HOME DASHBOARD (Home B) ============ -->
+    <section class="screen" id="screen-home" data-tab="home">
+      <div class="statusbar"></div>
+      <div class="pad">
+        <div class="topbar">
+          <button class="iconbtn" aria-label="Menu"><svg class="ic"><use href="#i-menu"/></svg></button>
+          <button class="crown-mark" data-go="morning" aria-label="Today"><svg><use href="#i-crown"/></svg></button>
+          <button class="streak-pill" data-go="streak" aria-label="Streak"><svg class="ic"><use href="#i-flame"/></svg><span>7</span></button>
+        </div>
+
+        <h2 class="h-greet">Good Morning, King.</h2>
+        <p class="muted">Let&rsquo;s grow together today.</p>
+
+        <div class="card focus-card">
+          <div class="focus-text">
+            <div class="eyebrow"><svg class="ic"><use href="#i-flag"/></svg><span>Today&rsquo;s Focus</span></div>
+            <h3 class="focus-title">Strength in<br>Discipline</h3>
+            <p class="focus-sub">2 of 5 tasks complete</p>
+            <div class="progress"><div class="progress-fill" style="width:40%"></div></div>
+          </div>
+          <div class="focus-art">
+            <svg viewBox="0 0 90 100" fill="none" stroke="#111" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="46" y1="14" x2="46" y2="34"/>
+              <path d="M46 14 H66 L60 20 L66 26 H46"/>
+              <path d="M6 96 L46 34 L86 96"/>
+              <path d="M38 46 L46 34 L54 46 L49 42 L46 47 L43 42 Z" stroke-width="2"/>
+              <path d="M44 96 Q50 84 42 76 Q34 68 44 58" stroke-width="2" stroke-dasharray="4 5"/>
+            </svg>
+          </div>
+        </div>
+
+        <button class="btn btn-solid btn-block" data-go="plans">Start Your Day <span class="btn-arrow"><svg class="ic"><use href="#i-arrow-right"/></svg></span></button>
+
+        <div class="quick-grid">
+          <button class="quick" data-go="player"><svg class="ic"><use href="#i-book"/></svg><span>Verse</span></button>
+          <button class="quick" data-go="prayer"><svg class="ic"><use href="#i-prayer"/></svg><span>Prayer</span></button>
+          <button class="quick" data-go="journal"><svg class="ic"><use href="#i-pencil"/></svg><span>Journal</span></button>
+          <button class="quick" data-go="plans"><svg class="ic"><use href="#i-plans"/></svg><span>Plan</span></button>
+        </div>
+
+        <div class="card reminder-card">
+          <div class="reminder-art">
+            <svg viewBox="0 0 64 64" fill="none" stroke="#111" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M27 12 H37 V24 H49 V34 H37 V54 H27 V34 H15 V24 H27 Z"/>
+              <line x1="32" y1="2" x2="32" y2="7" stroke-width="2"/>
+              <line x1="10" y1="10" x2="14" y2="14" stroke-width="2"/>
+              <line x1="54" y1="10" x2="50" y2="14" stroke-width="2"/>
+              <path d="M8 58 Q32 50 56 58" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="reminder-text">
+            <div class="eyebrow"><span>Daily Reminder</span></div>
+            <p class="reminder-msg">Discipline today.<br>Freedom tomorrow.<br>Legacy forever.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SCREEN: PLAYER ============ -->
+    <section class="screen" id="screen-player" data-tab="none">
+      <div class="statusbar"></div>
+      <div class="pad">
+        <div class="topbar">
+          <button class="iconbtn" data-go="back" aria-label="Close"><svg class="ic"><use href="#i-chevron-down"/></svg></button>
+          <span></span>
+          <button class="iconbtn iconbtn-round" aria-label="More"><svg class="ic"><use href="#i-dots"/></svg></button>
+        </div>
+
+        <p class="eyebrow center"><span>Listening to</span></p>
+        <h2 class="player-title">Philippians 4:13</h2>
+
+        <div class="player-art card">
+          <svg viewBox="0 0 280 200" fill="none" stroke="#111" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <!-- rays around cross -->
+            <g stroke-width="2">
+              <line x1="140" y1="14" x2="140" y2="4"/>
+              <line x1="108" y1="24" x2="100" y2="16"/>
+              <line x1="172" y1="24" x2="180" y2="16"/>
+              <line x1="92" y1="52" x2="80" y2="48"/>
+              <line x1="188" y1="52" x2="200" y2="48"/>
+            </g>
+            <!-- cross -->
+            <path d="M132 26 H148 V58 H176 V74 H148 V140 H132 V74 H104 V58 H132 Z"/>
+            <!-- base mound -->
+            <path d="M96 140 Q140 128 184 140" stroke-width="2"/>
+            <!-- hills -->
+            <path d="M2 198 Q70 152 140 162 T278 198"/>
+            <path d="M2 198 Q50 178 90 184" stroke-width="2"/>
+            <path d="M190 184 Q235 176 278 198" stroke-width="2"/>
+            <!-- path -->
+            <path d="M140 196 Q132 178 140 162" stroke-width="2" stroke-dasharray="4 5"/>
+            <!-- birds -->
+            <path d="M228 36 q4 -5 8 0 q4 -5 8 0" stroke-width="2"/>
+            <path d="M46 52 q4 -5 8 0 q4 -5 8 0" stroke-width="2"/>
+          </svg>
+        </div>
+
+        <div class="seek">
+          <div class="seek-track"><div class="seek-fill" id="seek-fill"></div><div class="seek-knob" id="seek-knob"></div></div>
+          <div class="seek-times"><span id="time-now">0:12</span><span id="time-total">2:45</span></div>
+        </div>
+
+        <div class="transport">
+          <button class="iconbtn" aria-label="Shuffle"><svg class="ic"><use href="#i-shuffle"/></svg></button>
+          <button class="iconbtn big" id="skip-back" aria-label="Back 15 seconds"><svg class="ic ic-lg"><use href="#i-skip-back"/></svg></button>
+          <button class="playbtn" id="play-toggle" aria-label="Play / pause"><svg class="ic ic-lg" id="play-icon"><use href="#i-pause"/></svg></button>
+          <button class="iconbtn big" id="skip-fwd" aria-label="Forward 15 seconds"><svg class="ic ic-lg"><use href="#i-skip-fwd"/></svg></button>
+          <button class="iconbtn" aria-label="Repeat"><svg class="ic"><use href="#i-repeat"/></svg></button>
+        </div>
+
+        <button class="btn btn-outline btn-block" data-go="journal">Reflect on this <svg class="ic"><use href="#i-pencil"/></svg></button>
+      </div>
+    </section>
+
+    <!-- ============ SCREEN: PLANS ============ -->
+    <section class="screen" id="screen-plans" data-tab="plans">
+      <div class="statusbar"></div>
+      <div class="pad">
+        <div class="title-row">
+          <h2 class="h-title">Plans</h2>
+          <svg class="ic ic-md"><use href="#i-compass"/></svg>
+        </div>
+        <p class="muted">Choose a plan to guide<br>your growth</p>
+
+        <div class="card plan-card">
+          <div class="plan-art">
+            <svg viewBox="0 0 80 80" fill="none" stroke="#111" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 72 L34 24 L52 46 L64 32 L78 72"/>
+              <path d="M28 34 L34 24 L41 34 L37 30 L34 35 L31 30 Z" stroke-width="2"/>
+              <path d="M38 72 Q44 62 38 54 Q32 46 40 40" stroke-width="2" stroke-dasharray="3.5 4.5"/>
+            </svg>
+          </div>
+          <div class="plan-text">
+            <h3 class="plan-title">21 Day<br>Discipline Plan</h3>
+            <p class="plan-sub">Build habits that honor God.</p>
+            <div class="plan-progress">
+              <div class="progress slim"><div class="progress-fill" style="width:60%"></div></div>
+              <span class="plan-pct">60%</span>
+            </div>
+          </div>
+          <svg class="ic plan-chev"><use href="#i-chevron-right"/></svg>
+        </div>
+
+        <div class="card plan-card">
+          <div class="plan-art">
+            <svg viewBox="0 0 80 80" fill="none" stroke="#111" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 56 a18 18 0 0 1 36 0" />
+              <line x1="6" y1="56" x2="74" y2="56"/>
+              <line x1="40" y1="22" x2="40" y2="12" stroke-width="2"/>
+              <line x1="22" y1="29" x2="15" y2="22" stroke-width="2"/>
+              <line x1="58" y1="29" x2="65" y2="22" stroke-width="2"/>
+              <line x1="14" y1="44" x2="5" y2="41" stroke-width="2"/>
+              <line x1="66" y1="44" x2="75" y2="41" stroke-width="2"/>
+              <path d="M14 66 Q40 60 66 66" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="plan-text">
+            <h3 class="plan-title">7 Day<br>Gratitude Plan</h3>
+            <p class="plan-sub">See what truly matters.</p>
+            <div class="plan-progress">
+              <div class="progress slim"><div class="progress-fill" style="width:0%"></div></div>
+              <span class="plan-pct">0%</span>
+            </div>
+          </div>
+          <svg class="ic plan-chev"><use href="#i-chevron-right"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SCREEN: JOURNAL ============ -->
+    <section class="screen" id="screen-journal" data-tab="journal">
+      <div class="statusbar"></div>
+      <div class="pad">
+        <div class="title-row">
+          <h2 class="h-title">Journal</h2>
+          <svg class="ic ic-md"><use href="#i-journal"/></svg>
+        </div>
+
+        <div class="date-strip">
+          <button class="date-chip"><span class="dow">Mon</span><span class="dom">13</span></button>
+          <button class="date-chip active"><span class="dow">Tue</span><span class="dom">14</span></button>
+          <button class="date-chip"><span class="dow">Wed</span><span class="dom">15</span></button>
+          <button class="date-chip"><span class="dow">Thu</span><span class="dom">16</span></button>
+          <button class="date-chip"><span class="dow">Fri</span><span class="dom">17</span></button>
+        </div>
+
+        <div class="card journal-card">
+          <h3 class="journal-q">How was your walk<br>with God today?</h3>
+          <textarea class="journal-input" id="journal-input" rows="7" placeholder="Write your thoughts..."></textarea>
+          <div class="journal-actions">
+            <button class="linkbtn" id="add-photo"><svg class="ic"><use href="#i-camera"/></svg> Add Photo</button>
+            <button class="btn btn-solid btn-sm" id="save-entry">Save Entry</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SCREEN: STREAK ============ -->
+    <section class="screen" id="screen-streak" data-tab="home">
+      <div class="statusbar"></div>
+      <div class="pad center-col">
+        <div class="title-row">
+          <h2 class="h-title">Streak</h2>
+          <svg class="ic ic-md"><use href="#i-flame"/></svg>
+        </div>
+
+        <div class="streak-flame">
+          <svg viewBox="0 0 100 120" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M50 6 C50 30 16 42 16 76 a34 34 0 0 0 68 0 C84 50 56 38 50 6 Z"/>
+            <path d="M50 64 c0 12 -13 16 -13 28 a13 13 0 0 0 26 0 c0 -12 -13 -16 -13 -28 Z" stroke-width="2.5"/>
+          </svg>
+        </div>
+
+        <div class="streak-number">7</div>
+        <div class="streak-label">Day Streak</div>
+
+        <p class="streak-msg"><strong>Keep going, King.</strong><br><span class="muted">You&rsquo;re building something<br>that lasts.</span></p>
+
+        <div class="week-dots">
+          <span class="dot filled">M</span>
+          <span class="dot filled">T</span>
+          <span class="dot filled">W</span>
+          <span class="dot filled">T</span>
+          <span class="dot filled">F</span>
+          <span class="dot">S</span>
+          <span class="dot">S</span>
+        </div>
+
+        <button class="btn btn-outline btn-block" data-go="plans">View Progress</button>
+      </div>
+    </section>
+
+    <!-- ============ SCREEN: PRAYER ============ -->
+    <section class="screen" id="screen-prayer" data-tab="prayer">
+      <div class="statusbar"></div>
+      <div class="pad">
+        <div class="title-row">
+          <h2 class="h-title">Prayer</h2>
+          <svg class="ic ic-md"><use href="#i-prayer"/></svg>
+        </div>
+        <p class="muted">Stay connected. We&rsquo;re never<br>meant to do this alone.</p>
+
+        <div class="prayer-art">
+          <svg viewBox="0 0 200 150" fill="none" stroke="#111" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <g stroke-width="2">
+              <line x1="100" y1="14" x2="100" y2="4"/>
+              <line x1="72" y1="24" x2="64" y2="16"/>
+              <line x1="128" y1="24" x2="136" y2="16"/>
+              <line x1="58" y1="46" x2="47" y2="42"/>
+              <line x1="142" y1="46" x2="153" y2="42"/>
+            </g>
+            <path d="M100 26 C88 48 76 64 76 90 L76 116 L56 136"/>
+            <path d="M100 26 C112 48 124 64 124 90 L124 116 L144 136"/>
+            <path d="M100 56 L100 108" />
+            <path d="M76 116 L100 106 L124 116"/>
+          </svg>
+        </div>
+
+        <div class="card prayer-row" data-go="player">
+          <div class="eyebrow"><span>Morning Prayer</span></div>
+          <p class="prayer-line">&ldquo;Lord, order my steps today.&rdquo;</p>
+          <svg class="ic plan-chev"><use href="#i-chevron-right"/></svg>
+        </div>
+        <div class="card prayer-row" data-go="player">
+          <div class="eyebrow"><span>Strength</span></div>
+          <p class="prayer-line">&ldquo;Make me bold where I am weak.&rdquo;</p>
+          <svg class="ic plan-chev"><use href="#i-chevron-right"/></svg>
+        </div>
+        <div class="card prayer-row" data-go="player">
+          <div class="eyebrow"><span>Gratitude</span></div>
+          <p class="prayer-line">&ldquo;Thank You for what I already have.&rdquo;</p>
+          <svg class="ic plan-chev"><use href="#i-chevron-right"/></svg>
+        </div>
+
+        <button class="btn btn-solid btn-block" data-go="player">Begin Prayer <span class="btn-arrow"><svg class="ic"><use href="#i-arrow-right"/></svg></span></button>
+      </div>
+    </section>
+
+    <!-- ============ SCREEN: PROFILE ============ -->
+    <section class="screen" id="screen-profile" data-tab="profile">
+      <div class="statusbar"></div>
+      <div class="pad">
+        <div class="title-row">
+          <h2 class="h-title">Profile</h2>
+          <svg class="ic ic-md"><use href="#i-shield"/></svg>
+        </div>
+
+        <div class="profile-head">
+          <div class="avatar"><svg><use href="#i-crown"/></svg></div>
+          <div>
+            <div class="profile-name">King</div>
+            <div class="muted profile-tag">Equipped. Inspired.<br>Unstoppable.</div>
+          </div>
+        </div>
+
+        <div class="menu">
+          <button class="menu-row"><svg class="ic"><use href="#i-stats"/></svg><span>Statistics</span><svg class="ic chev"><use href="#i-chevron-right"/></svg></button>
+          <button class="menu-row"><svg class="ic"><use href="#i-bookmark"/></svg><span>Bookmarks</span><svg class="ic chev"><use href="#i-chevron-right"/></svg></button>
+          <button class="menu-row"><svg class="ic"><use href="#i-download"/></svg><span>Downloads</span><svg class="ic chev"><use href="#i-chevron-right"/></svg></button>
+          <div class="menu-row">
+            <svg class="ic"><use href="#i-bell"/></svg><span>Push Notifications</span>
+            <button class="toggle on" id="notif-toggle" role="switch" aria-checked="true" aria-label="Push notifications"><span class="toggle-knob"></span></button>
+          </div>
+          <button class="menu-row" data-go="about"><svg class="ic"><use href="#i-info"/></svg><span>About</span><svg class="ic chev"><use href="#i-chevron-right"/></svg></button>
+          <button class="menu-row"><svg class="ic"><use href="#i-signout"/></svg><span>Sign Out</span><svg class="ic chev"><use href="#i-chevron-right"/></svg></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SCREEN: ABOUT ============ -->
+    <section class="screen" id="screen-about" data-tab="profile">
+      <div class="statusbar"></div>
+      <div class="pad">
+        <div class="topbar">
+          <button class="iconbtn" data-go="profile" aria-label="Back"><svg class="ic flip"><use href="#i-chevron-right"/></svg></button>
+          <span class="topbar-title">About</span>
+          <span class="iconbtn" style="visibility:hidden"></span>
+        </div>
+
+        <div class="about-mark"><svg><use href="#i-crown"/></svg></div>
+        <h2 class="h-title center">King</h2>
+        <p class="muted center">Daily strength for men of God.</p>
+
+        <div class="values">
+          <div class="value">
+            <div class="value-ic"><svg class="ic"><use href="#i-cross"/></svg></div>
+            <div><h4>Faith First</h4><p class="muted">Everything we do starts with Christ.</p></div>
+          </div>
+          <div class="value">
+            <div class="value-ic"><svg class="ic"><use href="#i-shield"/></svg></div>
+            <div><h4>Built for Men</h4><p class="muted">Real strength is built in the hidden moments.</p></div>
+          </div>
+          <div class="value">
+            <div class="value-ic"><svg class="ic"><use href="#i-flame"/></svg></div>
+            <div><h4>Daily Discipline</h4><p class="muted">Discipline today creates a powerful legacy tomorrow.</p></div>
+          </div>
+          <div class="value">
+            <div class="value-ic"><svg class="ic"><use href="#i-book"/></svg></div>
+            <div><h4>God&rsquo;s Word</h4><p class="muted">Truth for your mind, peace for your heart.</p></div>
+          </div>
+          <div class="value">
+            <div class="value-ic"><svg class="ic"><use href="#i-prayer"/></svg></div>
+            <div><h4>Prayer</h4><p class="muted">Stay connected. We&rsquo;re never meant to do this alone.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ BOTTOM NAV ============ -->
+  <nav class="bottom-nav" id="bottom-nav">
+    <button class="nav-item active" data-go="morning" data-tab="home"><svg class="ic"><use href="#i-home"/></svg><span>Home</span></button>
+    <button class="nav-item" data-go="plans" data-tab="plans"><svg class="ic"><use href="#i-plans"/></svg><span>Plans</span></button>
+    <button class="nav-item" data-go="journal" data-tab="journal"><svg class="ic"><use href="#i-journal"/></svg><span>Journal</span></button>
+    <button class="nav-item" data-go="prayer" data-tab="prayer"><svg class="ic"><use href="#i-prayer"/></svg><span>Prayer</span></button>
+    <button class="nav-item" data-go="profile" data-tab="profile"><svg class="ic"><use href="#i-profile"/></svg><span>Profile</span></button>
+  </nav>
+</div>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
