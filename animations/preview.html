@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Octopus → Box · Lottie preview</title>
+<style>
+  body { margin: 0; min-height: 100vh; display: flex; flex-direction: column;
+         align-items: center; justify-content: center; gap: 16px;
+         background: #071e30; color: #cfe9f5;
+         font: 15px/1.5 system-ui, sans-serif; }
+  #anim { width: min(90vw, 800px); aspect-ratio: 4 / 3;
+          border-radius: 12px; overflow: hidden;
+          box-shadow: 0 12px 40px rgba(0,0,0,.5); }
+  p { opacity: .7 }
+</style>
+</head>
+<body>
+  <div id="anim"></div>
+  <p>Serve this folder (e.g. <code>python3 -m http.server</code>) and open
+     this page — <code>file://</code> blocks the JSON fetch.</p>
+  <script src="https://unpkg.com/lottie-web@5.12.2/build/player/lottie.min.js"></script>
+  <script>
+    lottie.loadAnimation({
+      container: document.getElementById('anim'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'octopus-box.json',
+    });
+  </script>
+</body>
+</html>
